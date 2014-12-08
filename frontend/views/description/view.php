@@ -40,7 +40,11 @@ $this->registerMetaTag([
 
 
 
-\yii\bootstrap\BootstrapAsset::register($this);  ?>
+\yii\bootstrap\BootstrapAsset::register($this);
+
+
+$description->photo = $description->photo? '/uploads/'.$description->photo: '/images/empty.png';
+?>
 
 <div class="description-view">
     <h1><?= Html::encode($description->title) ?></h1>
@@ -50,7 +54,7 @@ $this->registerMetaTag([
             [
                 'label'=>'photo',
                 'format'=>'html',
-                'value'=>Html::img('/uploads/'.$description->photo)
+                'value'=>Html::img($description->photo, ["style" => "height: 350px"])
             ],
             'title',
             'description',
