@@ -6,6 +6,8 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model common\models\Point */
 /* @var $form yii\widgets\ActiveForm */
+
+\yii\bootstrap\BootstrapAsset::register($this);
 ?>
 
 <div class="point-form">

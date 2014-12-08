@@ -9,6 +9,8 @@ use yii\widgets\DetailView;
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Points', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+
+\yii\bootstrap\BootstrapAsset::register($this);
 ?>
 <div class="point-view">
 

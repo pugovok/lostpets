@@ -9,16 +9,13 @@ use yii\grid\GridView;
 
 $this->title = 'Points';
 $this->params['breadcrumbs'][] = $this->title;
+
+\yii\bootstrap\BootstrapAsset::register($this);
 ?>
 <div class="point-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Point', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
