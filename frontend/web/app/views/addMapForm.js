@@ -14,7 +14,6 @@ define([
 		option: {
 			center: new window.google.maps.LatLng(55.75634, 37.63002),
           	zoom: 12,
-          	minZoom: 10,
           	mapTypeId: window.google.maps.MapTypeId.ROADMAP
           
 		},
